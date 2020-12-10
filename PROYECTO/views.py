@@ -15,3 +15,5 @@ def crearEmpresa (request):
   return render(request,"empresa.html")
 def clientes(request):
   return render(request,"cliente.html")
+def inicios(request):
+  return render(request,"inicio.html")

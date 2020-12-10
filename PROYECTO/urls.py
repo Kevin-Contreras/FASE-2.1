@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from PROYECTO.views import saludar,administrador,seleccionarCliente,crearPersona,crearEmpresa,clientes
+from PROYECTO.views import saludar,administrador,seleccionarCliente,crearPersona,crearEmpresa,clientes,inicios
 
 urlpatterns = [
     path('',saludar),
@@ -24,5 +24,6 @@ urlpatterns = [
     path('administrador/crear/persona/',crearPersona),
     path('administrador/crear/empresa/',crearEmpresa),
     path('cliente/',clientes),
+    path('cliente/inicio',inicios),
 
 ]
