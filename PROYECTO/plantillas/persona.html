@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/persona.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>FORMULARIO DE CREACION DE CUENTA DE USUARIO</H1>
+  <form action="post">
+    <p>CUI</p>
+   <input type="text" name="cuiPersona">
+   <p>NIT</p>
+   <input type="text" name="nitPersona">
+   <p>NOMBRE</p>
+   <input type="text" name="nombrePersona">
+   <p>FECHA DE NACIMIENTO</p>
+   <input type="date" name="fecha">
+  <input type="submit" id="enviar" value="CREAR CUENTA">
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

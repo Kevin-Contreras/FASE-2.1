@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <link href="{% static 'css/administrador.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INICIO DE SESION</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <div id="contenedor">
+    <h1 id="titulo">BANCA VIRTUAL BIENVENIDO ADMINISTRADOR</h1>
+  <div id="divBotones">
+    <h3 id="textoContra">CONTRASEÑA</h3>
+    <form action="" method="post">
+      <input id="contraseña" type="password" >
+      <input id = "botonEnviar"type="submit" value="INICIAR SESION">
+    </form>
+   
+  </div>
+  </div>
+  {% include "componentes/footer.html"%}
+</body>
+</html>

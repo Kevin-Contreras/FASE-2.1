@@ -1,0 +1,24 @@
+*{
+  margin:0;
+}
+nav{
+  height: 50px;
+  background:rgb(77, 77, 77);
+
+}
+div{
+  height: 30px;
+  width: 200px;
+  padding: 10px;
+}
+h2:hover{
+  color:#ffff;
+-webkit-transition: all 1s linear;
+-moz-transition: all 1s linear;
+-ms-transition: all 1s linear;
+-o-transition: all 1s linear;
+transition: all 1s linear;
+}
+body{
+  background: rgb(219, 216, 216);
+}

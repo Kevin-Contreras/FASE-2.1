@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/empresa.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>FORMULARIO DE CREACION DE CUENTA DE UNA EMPRESA</H1>
+  <form action="post">
+    <p>TIPO DE EMPRESA</p>
+   <select type="text" name="cuiPersona">
+    <option value="value1">SOCIEDAD ANONIMA</option> 
+    <option value="value2">COMPAÑIA LIMITADA</option>
+    <option value="value3">EMPRESA INDIVIDUAL</option>
+   </select>
+   <p>NOMBRE DE LA EMPRESA</p>
+   <input type="text" name="nitPersona">
+   <p>NOMBRE COMERCIAL</p>
+   <input type="text" name="nombrePersona">
+   <p>NOMBRE COMPLETO DEL REPRESENTANTE LEGAL</p>
+   <input type="text" name="fecha">
+  <input type="submit" id="enviar" value="CREAR CUENTA">
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>
