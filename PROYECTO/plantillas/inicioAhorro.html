@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/inicio.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+      
+        <li><a target="_blank" href="img/1.jpeg"><span class="b"><i> AHORRO</i> </span>CUENTAS DE AHORRO</a>
+          <ul id="cuenta1">
+            <li><a href="inicio/crear_ahorro">CREAR CUENTA</a></li>
+            <li><a href="inicio/pagos">REALIZAR PAGOS</a></li>
+            <li><a href="inicio/menu">TRANSACCIONES</a></li>
+            <li><a href="inicio/cheques">PRE-AUTORIZACION DE CHEQUES</a></li>
+            <li><a href="inicio/estadocuenta">ESTADO DE CUENTA</a></li>
+            <li><a href="inicio/prestamos">PRESTAMOS</a></li>
+
+
+          </ul>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+  <div class="slider">
+    <ul>
+  
+      <li><img src="{%static 'img/6.jpg'%}"></li>
+      <li><img src="{%static 'img/7.jpg'%}"></li>
+      <li><img src="{%static 'img/8.jpg'%}"></li>
+      <li><img src="{%static 'img/9.jpg'%}"></li>
+    </ul>
+  </div>
+</body>
+</html>
