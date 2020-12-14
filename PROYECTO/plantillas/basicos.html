@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/basico.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>DEPOSITO</H1>
+  <form action="post">
+    <p>NUMERO DE CUENTA A DEPOSITAR</p>
+   <input type="text" name="cuiPersona">
+   <p>CANTIDAD PARA DEPOSITAR EN LA CUENTA</p>
+   <input type="text" name="nitPersona">
+  <input type="submit" id="enviar" value="CREAR CUENTA">
+  <p>ENTIDAD A PAGAR</p>
+  <select name="plantillaopersona" id="">
+    <option value="">AGUA</option>
+    <option value="">LUZ</option>
+    <option value="">TELEFONO</option>
+  </select>
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

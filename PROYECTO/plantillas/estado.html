@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/estado.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+  {% include "componentes/nav.html"%}
+  <h2>ESTADO DE CUENTA</h2>
+  <table>
+    <tr>
+      <th>SALDO</th>
+      <th>RETIRO</th>
+      <th>REGISTRO</th>
+    </tr>
+    <tr>
+      <td>8,000Q</td>
+      <td>6,000Q</td>
+      <td>12,000Q</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>2,000Q</td>
+      <td>12,300Q</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>7,000Q</td>
+      <td>12,500Q</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>8,000Q</td>
+      <td>12,700Q</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>9,000Q</td>
+      <td>12,800Q</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>5,000Q</td>
+      <td>12,200Q</td>
+    </tr>
+  </table>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/crearAhorro.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>FORMULARIO DE CREACION DE CUENTA DE AHORRO</H1>
+  <form action="post">
+    <p>NUMERO DE LIBRETA</p>
+   <input type="text" name="cuiPersona">
+   <p>CANTIDAD PARA DEPOSITAR EN LA CUENTA DE AHORRO</p>
+   <input type="text" name="nitPersona">
+  <input type="submit" id="enviar" value="CREAR CUENTA">
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

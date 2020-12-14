@@ -1,0 +1,19 @@
+form{
+  position:absolute;
+  left: 40%;
+  top: 250px;
+}
+input{
+  height: 30px;
+  width: 250px;
+  margin-top: 20px;
+}
+h1{
+  position: absolute;
+}
+#enviar{
+  position: absolute;
+  top: 70px;
+  right: 5px;
+
+}

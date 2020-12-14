@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/recibir.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>CHEQUE</H1>
+  <form action="post">
+    <p>NUMERO DE CHEQUE</p>
+  <input type="text" name="cuiPersona">
+  <input type="submit" id="enviar" value="ENVIAR">
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

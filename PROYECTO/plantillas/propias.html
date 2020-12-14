@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/propia.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>TRANSACCIONES ENTRE CUENTAS PROPIAS</H1>
+  <form action="post">
+    <p>NUMERO DE CUENTA DE LA CUENTA QUE DEPOSITARA</p>
+   <input type="text" name="cuiPersona">
+   <p>NUMERO DE CUENTA A LA CUAL SERA DEPOSITADA</p>
+   <input type="text" name="nitPersona">
+   <p>CANTIDAD A DEPOSITAR</p>
+   <input type="text" name="nitPersona">
+   <input type="submit" id="enviar" value="DEPOSITAR">
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

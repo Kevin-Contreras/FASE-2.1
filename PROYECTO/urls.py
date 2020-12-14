@@ -1,22 +1,6 @@
-"""PROYECTO URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
 from django.urls import path
-from PROYECTO.views import saludar,administrador,seleccionarCliente,crearPersona,crearEmpresa,clientes,inicios
-
+from PROYECTO.views import saludar,administrador,seleccionarCliente,crearPersona,crearEmpresa,clientes,inicios,ahorro,ventanaproveedorbasico,proveedor,proveedores
+from PROYECTO.views import trans,propias,cuentaTercero,menuCheques,emitirCheque,recibirCheque,estados,prestamos
 urlpatterns = [
     path('',saludar),
     path('administrador/',administrador),
@@ -25,5 +9,17 @@ urlpatterns = [
     path('administrador/crear/empresa/',crearEmpresa),
     path('cliente/',clientes),
     path('cliente/inicio',inicios),
+    path('cliente/inicio/crear_ahorro',ahorro),
+    path('cliente/inicio/pagos',ventanaproveedorbasico),
+    path('cliente/inicio/pagos/proveedorEmpleado',proveedor),
+    path('cliente/inicio/pagos/basico',proveedores),
+    path('cliente/inicio/menu',trans),
+    path('cliente/inicio/menu/propia',propias),
+    path('cliente/inicio/menu/tercero',cuentaTercero),
+    path('cliente/inicio/cheques',menuCheques),
+    path('cliente/inicio/cheques/emitirs',emitirCheque),
+    path('cliente/inicio/cheques/recibirs',recibirCheque),
+    path('cliente/inicio/estadocuenta',estados),
+    path('cliente/inicio/prestamos',prestamos),
 
 ]
