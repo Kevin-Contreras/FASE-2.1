@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <link href="{% static 'css/administrador.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clave</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <div id="contenedor">
+    <h1 id="titulo">CONTRASEÑA PARA LA TRANSACCION</h1>
+  <div id="divBotones">
+    
+    <form action="" method="post">
+      <input id="contraseña" type="password" >
+      <input id = "botonEnviar"type="submit" value="ACEPTAR">
+    </form>
+   
+  </div>
+  </div>
+  {% include "componentes/footer.html"%}
+</body>
+</html>

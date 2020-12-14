@@ -35,3 +35,5 @@ def iniciosAhorro(request):
   return render(request,"inicioAhorro.html")
 def iniciosFijo(request):
   return render(request,"plazofijo.html")
+def claves(request):
+  return render(request,"transaccionesclave.html")

@@ -1,6 +1,6 @@
 from django.urls import path
 from PROYECTO.views import clientes,inicios,ahorro,ventanaproveedorbasico,proveedor,proveedores,iniciosAhorro,iniciosFijo
-from PROYECTO.views import trans,propias,cuentaTercero,menuCheques,emitirCheque,recibirCheque,estados,prestamos
+from PROYECTO.views import trans,propias,cuentaTercero,menuCheques,emitirCheque,recibirCheque,estados,prestamos,claves
 urlpatterns = [
     
     path('',clientes),
@@ -13,7 +13,8 @@ urlpatterns = [
     path('inicio/pagos/basico',proveedores),
     path('inicio/menu',trans),
     path('inicio/menu/propia',propias),
-    path('inicio/menu/tercero',cuentaTercero),
+    path('inicio/menu/clave',claves),
+    path('inicio/menu/clave/tercero',cuentaTercero),
     path('inicio/cheques',menuCheques),
     path('inicio/cheques/emitirs',emitirCheque),
     path('inicio/cheques/recibirs',recibirCheque),
