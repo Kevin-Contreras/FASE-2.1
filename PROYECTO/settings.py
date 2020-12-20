@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.administrador'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'PROYECTO.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'PROYECTO/plantillas')],
+        'DIRS': [os.path.join(BASE_DIR,'PROYECTO/plantillas'),os.path.join(BASE_DIR,'apps/administrador/plantillas'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,14 +74,17 @@ WSGI_APPLICATION = 'PROYECTO.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-"""
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'PROYECTO',
+        'USER':'root',
+        'PASSWORD':'123naruto',
+        'HOST':'127.0.0.1',
+        'PORT':'3306'
+
     }
 }
-"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -120,4 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'PROYECTO/static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'PROYECTO/static'),os.path.join(BASE_DIR,'apps/administrador/static')]
