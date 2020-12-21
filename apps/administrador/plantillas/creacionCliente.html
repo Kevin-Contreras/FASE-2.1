@@ -10,17 +10,23 @@
 <body>
   {% include "componentes/nav.html"%}
   <H1>FORMULARIO DE CREACION DE CUENTA DE USUARIO</H1>
-  <form action="post">
+  <form action="" method=POST>
+    {% csrf_token %}
+    <p>USUARIO</p>
+    <input type="text" name="usuarioPersona" required>
     <p>CUI</p>
-   <input type="text" name="cuiPersona">
+   <input type="text" name="cuiPersona" required>
    <p>NIT</p>
-   <input type="text" name="nitPersona">
+   <input type="text" name="nitPersona" required>
    <p>NOMBRE</p>
-   <input type="text" name="nombrePersona">
+   <input type="text" name="nombrePersona" required>
    <p>FECHA DE NACIMIENTO</p>
-   <input type="date" name="fecha">
-  <input type="submit" id="enviar" value="CREAR CUENTA">
+   <input type="date" name="fecha" required>
+   <p>contraseña</p>
+   <input type="password" name="contraPersona" required>
+   <input type="submit" id="enviar" value="CREAR CUENTA">
   </form>
+  <h1>{{nota}}</h1>
   {% include "componentes/footer.html" %}
 </body>
 </html>

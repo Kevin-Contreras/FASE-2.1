@@ -1,7 +1,7 @@
 from django.urls import path
 from PROYECTO.views import clientes,inicios,ahorro,ventanaproveedorbasico,proveedor,proveedores,iniciosAhorro,iniciosFijo
 from PROYECTO.views import trans,propias,cuentaTercero,menuCheques,emitirCheque,recibirCheque,estados,prestamos,claves
-from apps.administrador.views import nose;
+from apps.administrador.views import nose,menuVista,clientesCreacion,empresaCreada,cuenta,cuenta2;
 urlpatterns = [
     
     path('',clientes),
@@ -22,5 +22,10 @@ urlpatterns = [
     path('inicio/estadocuenta',estados),
     path('inicio/prestamos',prestamos),
     path('administrador/',nose),
+    path('menuCrear/',menuVista),
+    path('crearPersona/',clientesCreacion),
+    path('crearEmpresas/',empresaCreada),
+    path('cuenta/',cuenta),
+    path('cuenta2/',cuenta2),
 
 ]

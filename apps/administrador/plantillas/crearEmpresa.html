@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/empresa.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>FORMULARIO DE CREACION DE USUARIO EMPRESA</H1>
+  <form method="post">
+    {% csrf_token %}
+    <p>Usuario</p>
+    <input type="text" name="usuarioEmpresa">
+    <p>TIPO DE EMPRESA</p>
+   <select type="text" name="tipoEmpresa">
+    <option value="SOCIEDAD ANONIMA">SOCIEDAD ANONIMA</option> 
+    <option value="COMPAÑIA LIMITADA">COMPAÑIA LIMITADA</option>
+    <option value="EMPRESA INDIVIDUAL">EMPRESA INDIVIDUAL</option>
+   </select>
+   <p>NOMBRE DE LA EMPRESA</p>
+   <input type="text" name="nombreEmpresa">
+   <p>NOMBRE COMERCIAL</p>
+   <input type="text" name="nombreComercial">
+   <p>NOMBRE COMPLETO DEL REPRESENTANTE LEGAL</p>
+   <input type="text" name="nombreLegal">
+   <p>CUI</p>
+   <input type="text" name="cuiEmpresa">
+   <p>CONTRASEÑA</p>
+   <input type="password" name="contraEmpresa">
+  <input type="submit" id="enviar" value="CREAR CUENTA">
+
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

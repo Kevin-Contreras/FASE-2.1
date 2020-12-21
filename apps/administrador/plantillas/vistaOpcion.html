@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/empresa.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>TIPO DE CUENTA </H1>
+  <form method="post">
+    {% csrf_token %}
+    <p>TIPO DE USUARIO</p>
+    <select type="text"  name="tipoUsuario" >
+      <option value="PERSONAL">PERSONAL</option> 
+      <option value="EMPRESARIAL">EMPRESARIAL</option>
+      
+     </select>
+    
+  <input type="submit" id="enviar" value="SIGUIENTE">
+
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>

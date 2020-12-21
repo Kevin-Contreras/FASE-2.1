@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'css/empresa.css' %}"  rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% include "componentes/nav.html"%}
+  <H1>FORMULARIO DE CREACION DE USUARIO PARA EMPRESA</H1>
+  <form method="post">
+    {% csrf_token %}
+    <p>Usuario</p>
+    <select  name="tipoUsuarios">
+      {% for p in persona %}
+      <option value={{p.cui}}>{{p.cui}}</option> 
+      {% endfor %}
+     </select>
+    <p>TIPO DE EMPRESA</p>
+   <select type="text" name="tipoCuenta">
+    <option value="AHORRO">CUENTA DE AHORRO</option> 
+    <option value="PLAZO FIJO">CUENTA DE PLAZO FIJO</option>
+    <option value="MONETARIA">CUENTA MONETARIA</option>
+   </select>
+  <input type="submit" id="enviar" value="CREAR CUENTA">
+
+  </form>
+  {% include "componentes/footer.html" %}
+</body>
+</html>
